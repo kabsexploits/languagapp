@@ -1,0 +1,74 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+       
+	<div class="row">
+     
+		{% for img in images %}
+		<div class="col-lg-3">
+		
+			
+
+			
+			   
+	    		
+	    		<button>
+	    		 <a href="{% url 'photo' img.id %} ">
+                  <img class=" geeks animate" src="{{img.imageURL}}">
+                   </a>
+
+	    		</button>
+	    	
+	    			 <p>{{img.date_added}}</p>
+			<div class="">
+				<strong id='imagename'>{{img.name}}</strong>
+           
+                <!---the product.id stand for the number of each items and the add is just a string to handle each item  -->
+                <div >
+                 <a href="{% url 'edit' img.id %} ">
+
+                  <button  class="btn btn-warning"><strong>Edit</strong></button></a>
+                   
+             
+				 <!---update-cart here is use to control the buttms (by using This.dataset in the javascript) -->
+			   
+				
+                    </button>
+                    
+
+                    <a href="{% url 'confirm' img.id %} ">
+				               <button  class="btn btn-danger"><strong>Delete</strong></button>
+                  </a>
+         <a href="{% url 'View_Photo' img.id %} ">
+         <button  class="btn btn-danger"><strong>API CALLS</strong></button></a>
+		        
+				
+                
+                   
+
+                  </div>
+                    
+			</div>
+		</div>
+		{% endfor %}
+
+              
+                {% if messages %}
+                    {% for message in  messages %}
+                        
+                        {{message}}
+                      
+                    {% endfor %}
+                {% endif %}  
+	</div>
+
+
+	
+
+<footer class='footer'>
+	  <div id="buttom"><strong></strong></div>
+        <a href="#Top" class="navbar-brand animate"><h6><strong>Back To Top</strong></h6></a>
+	</footer>
+
+	
+{% endblock content %}

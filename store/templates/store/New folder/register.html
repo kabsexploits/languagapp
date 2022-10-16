@@ -1,0 +1,41 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+
+{% block content %}
+<body class='register-body '>
+ <div class='register animate'>
+ <form method='POST' action='' autocomplete='off'>
+ {% csrf_token %}
+
+ <td>
+  
+    
+  <p >Create Accuont</p>
+  <input type='text' required name='username' placeholder='username'>
+   <p></p>
+  <input type='text' required  name='email' placeholder='email'>
+   <p></p>
+  <input type="password" required  name='password1' placeholder='password'>
+   <p></p>
+  <input type="password" required  name='password2' placeholder='comfirm password'><br>
+  <div class="field">
+                  <input type="submit" value="LOGIN">
+               </div>
+   <br>
+  <div>
+                       {% for message in messages %}
+                        {{message}}
+                        {% endfor %}
+                    </div><br>
+                        <br>
+   </td>
+
+       
+ </form>
+<div class="d-flex justify-content-center links">
+                        Already have an account? <a href="{% url 'Login' %}" ><button class="login-btn">Login</button></a><br>
+ 
+</body><br>
+
+{% endblock content %}

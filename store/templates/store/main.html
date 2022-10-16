@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<title>Imagesapp</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	
+<script type="text/javascript">
+	var user = '{{request.user}}'
+
+		
+	
+</script>
+
+</head>
+<nav class="header">
+    
+	  
+	     
+	     <a href="{% url 'createproducts' %} ">Upload Images</a>
+	  
+	    <div class="headers">
+	   
+	      
+	     		
+	     	 <div>
+	
+	   <h6 class="">Welcome
+               
+	     	</h6>
+       
+	     	
+	     	        
+	     	
+	     	</div>
+	     	
+	         
+	     	
+
+	     	<div><br>
+	     	
+	     
+	     	</div>
+	     	 
+	   
+
+	     	</div>
+	     	   
+	     	  	
+	    
+	    	{{order.get_cart_items}}
+	    		<div id='cart_items'></div>
+	    	<p id="c"></p>
+     
+	    </div>
+	  </div>
+
+	</nav>
+<body>
+   
+	
+
+            {% block content %}
+
+
+            {% endblock content %}
+       
+
+
+   
+	
+
+	<script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+	
+    
+	
+	    	
+</body>
+</html>

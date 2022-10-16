@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Photo View</title>
+
+	
+
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<body>
+   
+            <div class="col">
+
+                <a href="{% url 'store' %}" >
+
+                <div >
+                    <img class="photoview  animate " src="{{photo.imageURL}}">
+
+                  
+                </div>
+                </a>
+            </div>
+       
+</body>
+</html>

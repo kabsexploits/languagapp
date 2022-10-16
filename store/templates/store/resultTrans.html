@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>createproducts</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+</head>
+
+<body class="m-5">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+               
+                <div class="card">
+
+                        {% for i in lan %}
+       
+                   
+                              <div>
+                            <p>{{i.Text}}</p>:<p>{{i.Meaning}}</p>
+                              </div>
+        {% endfor %}
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
