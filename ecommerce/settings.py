@@ -144,5 +144,11 @@ MEDIA_URL = '/images/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
+STATIC_ROOT = os.path.join(BASE_DIR,"live-static-files","static-root")
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'live-static-files','media-root')
+
 
 CORS_ORIGIN_ALLOW_ALL = True
